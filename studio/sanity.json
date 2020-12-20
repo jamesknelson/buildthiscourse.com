@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "project": {
+    "name": "buildthiscourse.com"
+  },
+  "api": {
+    "projectId": "rwv7dazh",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "markdown",
+    "@sanity/code-input"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}

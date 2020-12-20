@@ -1,0 +1,10 @@
+query BlogIndex($publishedBefore: DateTime) {
+  publishedPosts: allPost(where: { publishedAt: { lt: $publishedBefore } }, sort: { publishedAt: DESC }, limit: 50) {
+    _id
+    title
+    slug {
+      current
+    }
+    contentRaw
+  }
+}

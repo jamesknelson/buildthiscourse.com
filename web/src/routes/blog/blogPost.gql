@@ -1,0 +1,10 @@
+query BlogPost($slug: String!) {
+  postsWithSlug: allPost(where: { slug: { current: { eq: $slug } } }) {
+    _id
+    title
+    slug {
+      current
+    }
+    contentRaw
+  }
+}
